@@ -3,13 +3,13 @@ import styled from 'styled-components'
 import { colors, flex } from '../styles/partials'
 
 const Container = styled.nav`
-    ${flex('row', 'space-between', 'center')}
+    ${flex('row', 'flex-end', 'center')}
     position: fixed;
     top: 0;
     background-color: ${colors.main};
     width: 100%;
     z-index: 10;
-    padding: 20px 20px 0 20px;
+    padding: 20px;
 `
 const ImageContainer = styled.div`
     height: 80px;
@@ -26,13 +26,17 @@ const NavLinks = styled.ul`
         color: ${colors.secondary};
         font-size: 16px;
     }
+
+    @media (max-width: 600px) {
+      display: none;
+    }
 `
 
 const Navbar = () => {
 
     return (
         <Container>
-            <ImageContainer></ImageContainer>
+            {/* <ImageContainer></ImageContainer> */}
             <NavLinks>
                 <a href="">where & when</a>
                 <a href="">on the day</a>

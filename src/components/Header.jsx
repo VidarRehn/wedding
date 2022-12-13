@@ -11,7 +11,7 @@ const Container = styled.header`
 `
 const ImageContainer = styled.div`
     max-width: 600px;
-    margin-top: 20%;
+    margin-top: 100px;
 
   img {
     max-height: 100%;

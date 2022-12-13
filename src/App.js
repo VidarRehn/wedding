@@ -26,6 +26,23 @@ const ImageContainer = styled.div`
   img {
     max-height: 100%;
     max-width: 100%;
+
+    @media (max-width: 400px) {
+      max-width: 300%;
+    }
+
+    /* @media (max-width: 600px) {
+      max-width: 250%;
+    }
+
+    @media (max-width: 800px) {
+      max-width: 200%;
+    }
+
+    @media (max-width: 1000px) {
+      max-width: 150%;
+    } */
+
   }
 `
 
@@ -46,10 +63,8 @@ function App() {
 
   useEffect(() => {
     if (100 > scrollPosition > 0) {
-      console.log(scrollPosition)
       let flowers = document.querySelector('.flowers')
       flowers.style.bottom = `-${scrollPosition}px`
-      console.log(flowers)
     }
   }, [scrollPosition])
 
