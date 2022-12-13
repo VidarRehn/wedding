@@ -113,7 +113,7 @@ const Navbar = () => {
                 <a href="#where">where & when</a>
                 <a href="#on-the-day">on the day</a>
                 <a href="#accomodation">accomodation</a>
-                <a href="">contact</a>
+                <a href="#contact">contact</a>
             </NavLinks>
             <Hamburger className='hamburger' onClick={(e) => openHamburger(e)}>
                 <span />
@@ -124,7 +124,7 @@ const Navbar = () => {
                 <a href="#where" onClick={() => openHamburger()}>where & when</a>
                 <a href="#on-the-day" onClick={() => openHamburger()}>on the day</a>
                 <a href="#accomodation" onClick={() => openHamburger()}>accomodation</a>
-                <a href="" onClick={() => openHamburger()}>contact</a>
+                <a href="#contact" onClick={() => openHamburger()}>contact</a>
             </Menu>
         </Container>
     )
