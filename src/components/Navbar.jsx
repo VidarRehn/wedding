@@ -1,6 +1,8 @@
 //CSS
 import styled from 'styled-components'
 import { colors, flex } from '../styles/partials'
+//resources
+import Names from '../resources/names.png'
 
 const Container = styled.nav`
     ${flex('row', 'flex-end', 'center')}
@@ -11,10 +13,21 @@ const Container = styled.nav`
     z-index: 10;
     padding: 20px;
 `
-const ImageContainer = styled.div`
-    height: 80px;
-    width: 80px;
-    background-color: ${colors.secondary};
+const ImageContainer = styled.a`
+    width: 160px;
+    opacity: 0;
+    position: absolute;
+    left: 20px;
+    transition: .5s linear;
+
+    img {
+        max-height: 100%;
+        max-width: 100%;
+    }
+
+    &.visible {
+        opacity: 1;
+    }
 `
 const NavLinks = styled.ul`
     ${flex('row', 'flex-start', 'center')};
@@ -87,29 +100,31 @@ const Menu = styled.ul`
 const Navbar = () => {
 
     const openHamburger = (e) => {
-        e.target.classList.toggle('active')
+        document.querySelector('.hamburger').classList.toggle('active')
         document.querySelector('.menu').classList.toggle('active')
     }
 
     return (
         <Container>
-            {/* <ImageContainer></ImageContainer> */}
+            <ImageContainer href='#home' className='logo-in-nav'>
+                <img src={Names} alt="" />
+            </ImageContainer>
             <NavLinks>
                 <a href="#where">where & when</a>
                 <a href="#on-the-day">on the day</a>
                 <a href="#accomodation">accomodation</a>
                 <a href="">contact</a>
             </NavLinks>
-            <Hamburger onClick={(e) => openHamburger(e)}>
+            <Hamburger className='hamburger' onClick={(e) => openHamburger(e)}>
                 <span />
                 <span />
                 <span />
             </Hamburger>
             <Menu className='menu'>
-                <a href="">where & when</a>
-                <a href="">on the day</a>
-                <a href="">accomodation</a>
-                <a href="">contact</a>
+                <a href="#where" onClick={() => openHamburger()}>where & when</a>
+                <a href="#on-the-day" onClick={() => openHamburger()}>on the day</a>
+                <a href="#accomodation" onClick={() => openHamburger()}>accomodation</a>
+                <a href="" onClick={() => openHamburger()}>contact</a>
             </Menu>
         </Container>
     )

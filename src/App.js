@@ -25,6 +25,7 @@ const ImageContainer = styled.div`
   bottom: 0;
   width: 100%;
   overflow: hidden;
+  z-index: 15;
 
   img {
     width: clamp(800px, 100%, 1200px);
@@ -52,6 +53,11 @@ function App() {
     if (100 > scrollPosition > 0) {
       let flowers = document.querySelector('.flowers')
       flowers.style.bottom = `-${scrollPosition}px`
+    }
+    if (scrollPosition > 100){
+      document.querySelector('.logo-in-nav').classList.add('visible')
+    } else {
+      document.querySelector('.logo-in-nav').classList.remove('visible')
     }
   }, [scrollPosition])
 

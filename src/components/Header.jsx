@@ -35,7 +35,7 @@ const Button = styled.button`
 const Header = () => {
 
     return (
-        <Container>
+        <Container id='home'>
             <ImageContainer>
                 <img src={Names} />
             </ImageContainer>
