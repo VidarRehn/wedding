@@ -8,6 +8,9 @@ import { useState, useEffect } from 'react'
 //components
 import Navbar from './components/Navbar'
 import Header from './components/Header'
+import Where from './components/Where'
+import OnTheDay from './components/OnTheDay'
+import Accomodation from './components/Accomodation'
 import Gallery from './components/Gallery'
 
 const Wrapper = styled.div`
@@ -24,25 +27,9 @@ const ImageContainer = styled.div`
   overflow: hidden;
 
   img {
-    max-height: 100%;
-    max-width: 100%;
-
-    @media (max-width: 400px) {
-      max-width: 300%;
-    }
-
-    /* @media (max-width: 600px) {
-      max-width: 250%;
-    }
-
-    @media (max-width: 800px) {
-      max-width: 200%;
-    }
-
-    @media (max-width: 1000px) {
-      max-width: 150%;
-    } */
-
+    width: clamp(800px, 100%, 1200px);
+    /* max-height: 100%;
+    max-width: 100%; */
   }
 `
 
@@ -73,6 +60,9 @@ function App() {
     <Wrapper>
       <Navbar />
       <Header />
+      <Where />
+      <OnTheDay />
+      <Accomodation />
       <Gallery />
 
       <ImageContainer className='flowers'>

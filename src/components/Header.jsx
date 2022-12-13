@@ -12,6 +12,7 @@ const Container = styled.header`
 const ImageContainer = styled.div`
     max-width: 600px;
     margin-top: 100px;
+    pointer-events: none;
 
   img {
     max-height: 100%;
@@ -21,7 +22,7 @@ const ImageContainer = styled.div`
 `
 const Text = styled.h2`
     font-weight: 400;
-    font-size: clamp(20px, 2em, 40px);
+    font-size: clamp(16px, 2em, 40px);
     color: ${colors.secondary};
 `
 const Button = styled.button`

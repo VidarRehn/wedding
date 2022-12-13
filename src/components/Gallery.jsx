@@ -28,6 +28,8 @@ import TwentyThree from '../resources/23.JPG'
 
 
 const Container = styled.header`
+    /* min-width: 500px;
+    overflow-x: auto; */
     padding: 0px 20px;
     width: 100%;
     min-height: 100vh;
@@ -51,15 +53,38 @@ const Container = styled.header`
     }
 `
 const ImageContainer = styled.div`
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 
     img {
         width: 100%;
         height: 100%;
         object-fit: cover;
+        /* transition: .2s linear; */
     }
+
+    /* &::after {
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: #ffffff38;
+    }
+
+    &:hover {
+
+        img {
+            width: 120%;
+            height: 120%;
+        }
+        
+        ::after {
+            display: none;
+        }
+    } */
 `
 
 const Gallery = () => {
