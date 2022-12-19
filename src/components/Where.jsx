@@ -6,6 +6,7 @@ const Container = styled.section`
     ${flex('column', 'flex-start', 'center')};
     gap: 20px;
     min-height: 100vh;
+    width: 100%;
 `
 const Title = styled.h2`
     font-weight: 400;
@@ -15,18 +16,21 @@ const Title = styled.h2`
 `
 const InnerContainer = styled.div`
     ${flex()};
+    width: 100%;
+
+    @media (min-width: 600px) {
+      ${flex('column')};
+    }
 `
 const MapContainer = styled.div`
     height: 60vh;
-    max-width: 500px;
-    width: 100vw;
+    width: 100%;
     background-color: #cecece;
 `
 const TextContainer = styled.div`
     height: 60vh;
-    max-width: 500px;
-    width: 100vw;
-    outline: 1px solid red;
+    width: 100%;
+    background: #bb8dbb;
 `
 
 const Where = () => {
