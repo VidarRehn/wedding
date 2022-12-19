@@ -1,6 +1,8 @@
 //CSS
 import styled from 'styled-components'
 import { colors, flex } from '../styles/partials'
+//resources
+import Venue from '../resources/Officersmassen.jpg'
 
 const Container = styled.section`
     ${flex('column', 'flex-start', 'center')};
@@ -26,6 +28,12 @@ const MapContainer = styled.div`
     height: 60vh;
     width: 100%;
     background-color: #cecece;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 `
 const TextContainer = styled.div`
     height: 60vh;
@@ -39,7 +47,9 @@ const Where = () => {
         <Container id='where'>
             <Title>Where & when</Title>
             <InnerContainer>
-                <MapContainer></MapContainer>
+                <MapContainer>
+                    <img src={Venue} alt="" />
+                </MapContainer>
                 <TextContainer></TextContainer>
             </InnerContainer>
 
