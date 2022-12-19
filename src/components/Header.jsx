@@ -3,6 +3,9 @@ import styled from 'styled-components'
 import { colors, flex } from '../styles/partials'
 //resources
 import Names from '../resources/names.png'
+import Animation from '../resources/name-animation.gif'
+//react hooks
+import { useEffect, useState } from 'react'
 
 const Container = styled.header`
     ${flex('column', 'flex-start', 'center')};
@@ -34,10 +37,18 @@ const Button = styled.button`
 
 const Header = () => {
 
+    const [loading, setLoading] = useState(true)
+
+    useEffect(() => {
+        setTimeout(() => {
+            setLoading(false)
+        }, 2600);
+    })
+
     return (
         <Container id='home'>
             <ImageContainer>
-                <img src={Names} />
+                <img src={loading ? Animation : Names} />
             </ImageContainer>
             <Text>5 august 2023, Älvkarleby</Text>
             <Button>RSVP</Button>
