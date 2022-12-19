@@ -15,11 +15,11 @@ const Title = styled.h2`
     color: ${colors.secondary};
 `
 const InnerContainer = styled.div`
-    ${flex()};
+    ${flex('column')};
     width: 100%;
 
     @media (min-width: 600px) {
-      ${flex('column')};
+      ${flex()};
     }
 `
 const TextContainer = styled.div`
