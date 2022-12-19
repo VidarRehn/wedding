@@ -6,6 +6,7 @@ const Container = styled.section`
     ${flex('column', 'flex-start', 'center')};
     gap: 20px;
     min-height: 100vh;
+    width: 100%;
 `
 const Title = styled.h2`
     font-weight: 400;
@@ -14,13 +15,17 @@ const Title = styled.h2`
     color: ${colors.secondary};
 `
 const InnerContainer = styled.div`
-    ${flex()};
+    ${flex('column')};
+    width: 100%;
+
+    @media (min-width: 600px) {
+      ${flex()};
+    }
 `
 const TextContainer = styled.div`
     height: 60vh;
-    max-width: 800px;
-    width: 100vw;
-    outline: 1px solid red;
+    width: 100%;
+    background: #e8e88a;
 `
 
 const Accomodation = () => {

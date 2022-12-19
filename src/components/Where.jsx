@@ -1,11 +1,14 @@
 //CSS
 import styled from 'styled-components'
 import { colors, flex } from '../styles/partials'
+//resources
+import Venue from '../resources/Officersmassen.jpg'
 
 const Container = styled.section`
     ${flex('column', 'flex-start', 'center')};
     gap: 20px;
     min-height: 100vh;
+    width: 100%;
 `
 const Title = styled.h2`
     font-weight: 400;
@@ -14,19 +17,28 @@ const Title = styled.h2`
     color: ${colors.secondary};
 `
 const InnerContainer = styled.div`
-    ${flex()};
+    ${flex('column')};
+    width: 100%;
+
+    @media (min-width: 600px) {
+      ${flex()};
+    }
 `
 const MapContainer = styled.div`
     height: 60vh;
-    max-width: 500px;
-    width: 100vw;
+    width: 100%;
     background-color: #cecece;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 `
 const TextContainer = styled.div`
     height: 60vh;
-    max-width: 500px;
-    width: 100vw;
-    outline: 1px solid red;
+    width: 100%;
+    background: #bb8dbb;
 `
 
 const Where = () => {
@@ -35,7 +47,9 @@ const Where = () => {
         <Container id='where'>
             <Title>Where & when</Title>
             <InnerContainer>
-                <MapContainer></MapContainer>
+                <MapContainer>
+                    <img src={Venue} alt="" />
+                </MapContainer>
                 <TextContainer></TextContainer>
             </InnerContainer>
 
