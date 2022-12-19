@@ -50,9 +50,9 @@ function App() {
   }, [])
 
   useEffect(() => {
-    if (200 > scrollPosition > 0) {
+    if (400 > scrollPosition > 0) {
       let flowers = document.querySelector('.flowers')
-      flowers.style.bottom = `-${scrollPosition/2}px`
+      flowers.style.bottom = `-${scrollPosition/4}px`
     }
     if (scrollPosition > 100){
       document.querySelector('.logo-in-nav').classList.add('visible')
