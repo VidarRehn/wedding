@@ -64,8 +64,8 @@ function App() {
   return (
     <>
     <Wrapper>
-      <Navbar />
       <Header />
+      <Navbar />
       <Where />
       <OnTheDay />
       <Accomodation />
