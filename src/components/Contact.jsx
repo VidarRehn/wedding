@@ -60,6 +60,10 @@ const Contact = () => {
 
     const [typeOfForm, setTypeOfForm] = useState('RSVP')
 
+    const handleForm = (e) => {
+        setTypeOfForm(e.target.value)
+    }
+
     return (
         <Container id='contact'>
             <Title>Contact / RSVP</Title>
@@ -68,11 +72,11 @@ const Contact = () => {
                 <div>
                     <div>
                         <label htmlFor="rsvp">RSVP</label>
-                        <input type="radio" name="type" id="rsvp" defaultChecked />
+                        <input onChange={(e) => handleForm(e)} type="radio" name="type" id="rsvp" defaultChecked defaultValue={'RSVP'} />
                     </div>
                     <div>
                         <label htmlFor="question">Ask a question</label>
-                        <input type="radio" name="type" id="question" />
+                        <input onChange={(e) => handleForm(e)} type="radio" name="type" id="question" defaultValue={'Question'} />
                     </div>
                 </div>
             </ChooseType>
