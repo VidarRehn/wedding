@@ -1,6 +1,6 @@
 //CSS
 import styled from 'styled-components'
-import { colors, flex } from '../styles/partials'
+import { colors, flex, fonts } from '../styles/partials'
 //resources
 import Venue from '../resources/Officersmassen.jpg'
 
@@ -12,7 +12,7 @@ const Container = styled.section`
 `
 const Title = styled.h2`
     font-weight: 400;
-    font-size: clamp(16px, 2em, 40px);
+    font-size: ${fonts.heading};
     margin-top: 80px;
     color: ${colors.secondary};
 `
@@ -24,7 +24,7 @@ const InnerContainer = styled.div`
       ${flex()};
     }
 `
-const MapContainer = styled.div`
+const ImageContainer = styled.div`
     height: 60vh;
     width: 100%;
     background-color: #cecece;
@@ -38,7 +38,16 @@ const MapContainer = styled.div`
 const TextContainer = styled.div`
     height: 60vh;
     width: 100%;
-    background: #bb8dbb;
+    padding: 20px;
+
+    h3 {
+        font-weight: 400;
+        font-size: ${fonts.subhheading};
+    }
+
+    a {
+        font-size: ${fonts.paragraph}; 
+    }
 `
 
 const Where = () => {
@@ -47,10 +56,15 @@ const Where = () => {
         <Container id='where'>
             <Title>Where & when</Title>
             <InnerContainer>
-                <MapContainer>
+                <ImageContainer>
                     <img src={Venue} alt="" />
-                </MapContainer>
-                <TextContainer></TextContainer>
+                </ImageContainer>
+                <TextContainer>
+                    <h3>Officersmässen, Älvkarleby</h3>
+                    <a href="https://www.officersmassen.com/">Go to website</a>
+                    <h3>Älvkarleby kyrka</h3>
+                    <a href="https://www.svenskakyrkan.se/platser/7406-alvkarleby-skutskars-forsamling-alvkarleby-kyrka">Go to website</a>
+                </TextContainer>
             </InnerContainer>
 
         </Container>

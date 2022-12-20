@@ -90,7 +90,7 @@ const Menu = styled.ul`
     }
 
     a {
-        margin-top: 30px;
+        margin-top: 40px;
         text-decoration: none;
         color: ${colors.secondary};
         font-size: 20px;

@@ -12,6 +12,7 @@ import Where from './components/Where'
 import OnTheDay from './components/OnTheDay'
 import Accomodation from './components/Accomodation'
 import Gallery from './components/Gallery'
+import Contact from './components/Contact'
 
 const Wrapper = styled.div`
   ${flex('column', 'center', 'center')};
@@ -70,6 +71,7 @@ function App() {
       <OnTheDay />
       <Accomodation />
       <Gallery />
+      <Contact />
 
       <ImageContainer className='flowers'>
         <img src={Flowers} />

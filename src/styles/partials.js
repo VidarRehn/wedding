@@ -12,3 +12,9 @@ export const flex = (direction, justify, align) => css`
     justify-content: ${justify || 'flex-start'};
     align-items: ${align || 'flex-start'};
 `
+
+export const fonts = {
+    heading: 'clamp(16px, 2em, 40px)',
+    subhheading: 'clamp(14px, 1.8em, 34px)',
+    paragraph: 'clamp(10px, 1.2em, 20px)',
+}
