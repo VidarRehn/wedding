@@ -1,6 +1,6 @@
 //CSS
 import styled from 'styled-components'
-import { colors, flex } from '../styles/partials'
+import { colors, flex, fonts } from '../styles/partials'
 //resources
 import Names from '../resources/names.png'
 import Animation from '../resources/name-animation.gif'
@@ -25,7 +25,7 @@ const ImageContainer = styled.div`
 `
 const Text = styled.h2`
     font-weight: 400;
-    font-size: clamp(16px, 2em, 40px);
+    font-size: ${fonts.heading};
     color: ${colors.secondary};
 `
 const Button = styled.button`

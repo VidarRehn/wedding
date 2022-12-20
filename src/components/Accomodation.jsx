@@ -1,6 +1,6 @@
 //CSS
 import styled from 'styled-components'
-import { colors, flex } from '../styles/partials'
+import { colors, flex, fonts } from '../styles/partials'
 
 const Container = styled.section`
     ${flex('column', 'flex-start', 'center')};
@@ -10,7 +10,7 @@ const Container = styled.section`
 `
 const Title = styled.h2`
     font-weight: 400;
-    font-size: clamp(16px, 2em, 40px);
+    font-size: ${fonts.heading};
     margin-top: 80px;
     color: ${colors.secondary};
 `
